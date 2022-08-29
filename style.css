@@ -48,6 +48,11 @@ body > section {
     border: none;
 }
 
+#count > input:invalid {
+    background: red;
+    color: white;
+}
+
 #arrow {
     display: none;
     position: absolute;
