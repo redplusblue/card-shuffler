@@ -2,7 +2,7 @@
 ### A simple and elegant card shuffler that I made using HTML/CSS/JS, primarily to practice box shadows on different elements. 
 #### Click on the picture/the link below to try!
 
-<a href="https://redplusblue.github.io/card-shuffler/"><img src="files/preview.png"></a>
+<a href="https://redplusblue.github.io/card-shuffler/" target="_blank" rel="noopener noreferrer"><img src="files/preview.png"></a>
 
 ## [Click to open](https://redplusblue.github.io/card-shuffler/)
 
