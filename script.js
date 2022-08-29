@@ -1,11 +1,22 @@
 let cards = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 let suits = ['♠', '♥', '♦', '♣'];
 let shuffleButton = document.getElementById('shuffle-btn');
+let numCards = document.getElementById('count-box');
 let desk = document.getElementById('deck');
+const numValue = 52;
 
 shuffleButton.addEventListener('click', function(){
-    createCardContainer(13);
+    if(numCards.value > 52 || numCards.value < 1 || typeof(Number(numCards)) != 'number'){}
+    createCardContainer(numCards.value);
 });
+
+document.getElementById('count').onmouseover = function(){
+    document.getElementById('arrow').style.display = 'inherit';
+}
+
+document.getElementById('count').onmouseout = function(){
+    document.getElementById('arrow').style.display = 'none';
+}
 
 function deckCreator() {
     let deck = [];
@@ -33,3 +44,11 @@ function createCardContainer(number){
 }
 
 createCardContainer(52);
+
+// To update dynamically the number of cards based on the input value
+// setInterval(function(){
+//     if(Number(numCards.value) != numValue) {
+//         createCardContainer(numCards.value);
+//         numValue = numCards.value;
+//     }
+// }, 500)

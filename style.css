@@ -1,23 +1,63 @@
+:root {
+    --box-shadow:rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
 html {
     margin: 0;
 }
 body {
+    background-color: rgba(0, 0, 0, 0.01);
     margin: 0;
 }
 body > section {
-    border: 2px solid red;
-    display: grid;
-    grid-template-rows: 1fr 7fr;
+    display: flex;
+    flex-direction: column;
 }
 
 #top-nav {
+    max-height: 20vh;
+    min-height: 50px;
+    border-radius: 1%;
+    margin: 0.5rem;
     background-color: aquamarine;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--box-shadow);
+}
+
+#count {
+    box-shadow: var(--box-shadow);
+    border-radius: 5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    left: 1rem;
+    background: white;
+    width: fit-content;
+    height: fit-content;
+}
+
+#count > input {
+    border-radius: 5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+}
+
+#arrow {
+    display: none;
+    position: absolute;
+    left: 32vw;
+    font-size: 4rem;
+    color: #d47fff;
 }
 
 #shuffle-btn {
+    margin: 5px;
     border-radius: 50px;
     border: none;
     background-color: #d47fff;
@@ -26,8 +66,8 @@ body > section {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     min-width: 90px;
     min-height: 50px;
-    height: 10vh;
     width: 10vw;
+    box-shadow: var(--box-shadow);
 }
 
 #shuffle-btn:hover {
@@ -36,7 +76,6 @@ body > section {
 }
 
 #deck {
-    background-color: rgba(0, 0, 0, 0.00) !important;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -45,6 +84,7 @@ body > section {
 }
 
 #card {
+    border-radius: 2%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 2em;
     display: flex;
@@ -53,5 +93,43 @@ body > section {
     width: 10rem;
     aspect-ratio: 1/1.5;
     margin: 1rem;
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px
+    box-shadow: var(--box-shadow);
+}
+
+#card:hover {
+    cursor: grab; 
+    transform: translateY(-5px);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > a:link, footer > a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+footer > a > div {
+    opacity: 95%;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: var(--box-shadow);
+}
+
+footer> a >div:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.113); 
+    animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(359deg);
+    }
 }
