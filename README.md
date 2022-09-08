@@ -12,4 +12,4 @@
 ## What I used/learned: 
 1. HTML: making a link open in a new tab. 
 2. CSS: `:hover` , `transform` : `translate` , `rotate` ; `@keyframes` , `box-shadow`
-3. JS: Objects, Event Listeners
+3. JS: Arrays, Event Listeners
